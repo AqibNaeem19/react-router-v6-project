@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Profile from './Pages/Profile';
+import OrderSummary from "./Pages/OrderSummary";
 import ErrorPage from "./Pages/ErrorPage";
 
 import "./App.css";
@@ -19,7 +20,9 @@ function App() {
         <Route path='/' element={ <Home />} />
         <Route path='/about' element={ < About />} />
         <Route path='/profile' element={ <Profile />} />
+        <Route path='/order-summary' element={ <OrderSummary />} />
         <Route path='*' element={ <ErrorPage />} />
+
       </Routes>
     </BrowserRouter>
   );
