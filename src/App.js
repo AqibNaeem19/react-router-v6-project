@@ -1,9 +1,12 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import Home from "./Pages/Home";
+import Users from "./Pages/Users";
+import Admin from "./Pages/Admin";
 import About from "./Pages/About";
 import Profile from "./Pages/Profile";
 import Products from "./Pages/Products";
+import UserDetails from "./Pages/UserDetails";
 import NewProducts from "./Pages/NewProducts";
 import OrderSummary from "./Pages/OrderSummary";
 import FeaturedProducts from "./Pages/FeaturedProducts";
@@ -30,6 +33,10 @@ function App() {
           <Route path="new" element={<NewProducts />} />
         </Route>
         <Route path="/order-summary" element={<OrderSummary />} />
+        <Route path="/users" element={<Users />}>
+          <Route path=":userId" element={<UserDetails />} />
+          <Route path="admin" element={<Admin />} />
+        </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
