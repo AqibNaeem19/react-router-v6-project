@@ -16,3 +16,7 @@ nav a.active{
   font-weight: bold;
   border-bottom: 2px solid rgb(50, 50, 156);
 }
+
+a{
+  margin-right: 5px;
+}
