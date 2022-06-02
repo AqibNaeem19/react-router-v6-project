@@ -25,6 +25,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         {/* Nested Routes */}
         <Route path="/products" element={<Products />}>
+          <Route index element={<FeaturedProducts />} />
           <Route path="featured" element={<FeaturedProducts />} />
           <Route path="new" element={<NewProducts />} />
         </Route>
